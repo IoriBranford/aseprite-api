@@ -1,0 +1,16 @@
+{
+    // if not set, the folder name will be used
+    "name"    : "Aseprite",
+    // list of matched words
+    "words"   : ["app%.%w+"],
+    // list or matched file names. `.lua`, `.dll` and `.so` only
+    "files"   : [],
+    // list of settings to be changed
+    "settings"  : {
+        "Lua.runtime.version" : "LuaJIT",
+        "Lua.diagnostics.globals" : [
+            "init",
+            "exit"
+        ]
+    }
+}
