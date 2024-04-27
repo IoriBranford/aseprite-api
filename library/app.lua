@@ -6,6 +6,7 @@
 ---@field image Image
 ---@field layer Layer
 ---@field sprite Sprite
+---@field sprites Sprite[]
 app = {}
 
 ---@class AppAlert
