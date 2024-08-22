@@ -47,7 +47,7 @@ function Image:drawImage(sourceImage, position, opacity, blendmode) end
 ---@field toFrame Frame
 ---@field frames integer
 ---@field name string
----@field anidir AniDir
+---@field aniDir AniDir
 ---@field repeats integer 
 ---0 = Doesn't specify, plays infinite in UI, once on export, for ping-pong it plays once in each direction
 ---1 = Plays once, for ping-pong it plays just in one direction
