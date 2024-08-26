@@ -8,6 +8,7 @@
 ---@field cel Cel?
 Image = {}
 
+---@overload fun(sprite:Sprite):Image
 ---@overload fun(otherImage:Image, rectangle:Rectangle):Image
 function Image() end
 
@@ -64,6 +65,7 @@ Sprite = {}
 
 ---@overload fun(width:number,height:number):Sprite
 ---@overload fun(width:number,height:number,colorMode:ColorMode):Sprite
+---@overload fun(sprite:Sprite):Sprite
 function Sprite() end
 
 ---@return Layer
@@ -86,3 +88,5 @@ function Sprite:newCel(layer, frame, image, position) end
 ---@param toFrameNumber integer
 ---@return Tag
 function Sprite:newTag(fromFrameNumber, toFrameNumber) end
+
+function Sprite:flatten() end
