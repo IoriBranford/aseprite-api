@@ -5,6 +5,9 @@ app.command = {}
 ---@param url string
 function app.command.openBrowser(url) end
 
+---@param t { type: "url", path: string }
+function app.command.Launch(t) end
+
 ---@class ExportSpriteSheetArgs
 ---@field ui boolean
 ---@field askOverwrite boolean
