@@ -33,6 +33,8 @@ function Image:drawImage(sourceImage, position, opacity, blendmode) end
 ---@field name string
 ---@field opacity integer from 0 to 255. The layer is completely transparent when the value is 0; opaque when the value is 255. When the layer is a background, returns 255.
 ---@field isImage boolean
+---@field isGroup boolean
+---@field layers Layer[]? if layer is group
 ---@field cels Cel[]
 
 ---@class Frame
@@ -60,6 +62,7 @@ function Image:drawImage(sourceImage, position, opacity, blendmode) end
 ---@field height number
 ---@field frames Frame[]
 ---@field layers Layer[]
+---@field tags Tag[]
 ---@field filename string
 Sprite = {}
 
