@@ -12,7 +12,7 @@ app = {}
 ---@class AppAlert
 ---@field title string
 ---@field text string|string[]
----@field buttons string|string[]
+---@field buttons string|string[]?
 
 ---@param alert string|AppAlert
 function app.alert(alert) end
