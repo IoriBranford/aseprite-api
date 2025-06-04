@@ -21,3 +21,7 @@ function app.alert(alert) end
 ---@param f function
 ---@overload fun(f:function)
 function app.transaction(name, f) end
+
+---@param filename string
+---@return Sprite?
+function app.open(filename) end
