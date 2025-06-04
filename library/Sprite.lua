@@ -98,3 +98,6 @@ function Sprite:newCel(layer, frame, image, position) end
 function Sprite:newTag(fromFrameNumber, toFrameNumber) end
 
 function Sprite:flatten() end
+
+---@param palette Palette
+function Sprite:setPalette(palette) end
