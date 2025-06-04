@@ -63,6 +63,7 @@ function Image:drawImage(sourceImage, position, opacity, blendmode) end
 ---@field frames Frame[]
 ---@field layers Layer[]
 ---@field tags Tag[]
+---@field palettes Palette[]
 ---@field filename string
 Sprite = {}
 
