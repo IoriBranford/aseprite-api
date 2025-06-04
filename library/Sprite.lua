@@ -72,6 +72,10 @@ Sprite = {}
 ---@overload fun(sprite:Sprite):Sprite
 function Sprite() end
 
+---Closes the sprite. This doesn't ask the user to save changes.
+---If you want to do the classic File > Close where the user is asking to save changes, you can use app.command.CloseFile().
+function Sprite:close() end
+
 ---@return Layer
 function Sprite:newLayer() end
 
