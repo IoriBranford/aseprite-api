@@ -101,3 +101,8 @@ function Sprite:flatten() end
 
 ---@param palette Palette
 function Sprite:setPalette(palette) end
+
+---@param filename string
+function Sprite:saveAs(filename) end
+
+function Sprite:close() end
