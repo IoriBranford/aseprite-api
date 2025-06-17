@@ -43,3 +43,15 @@ function app.command.Launch(t) end
 
 ---@param t ExportSpriteSheetArgs
 function app.command.ExportSpriteSheet(t) end
+
+---@class CanvasSizeArgs
+---@field ui boolean
+---@field left integer
+---@field top integer
+---@field right integer
+---@field bottom integer
+---@field bounds Rectangle? alternative to left/top/right/bottom
+---@field trimOutside boolean
+
+---@param t CanvasSizeArgs
+function app.command.CanvasSize(t) end
