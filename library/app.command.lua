@@ -8,6 +8,17 @@ function app.command.openBrowser(url) end
 ---@param t { type: "url", path: string }
 function app.command.Launch(t) end
 
+---@class ImportSpriteSheetArgs
+---@field ui boolean? default true
+---@field type SpriteSheetType
+---@field frameBounds RectangleArg
+---@field padding SizeArg?
+---@field partialTiles boolean? default false
+
+---comment
+---@param t ImportSpriteSheetArgs
+function app.command.ImportSpriteSheet(t) end
+
 ---@class ExportSpriteSheetArgs
 ---@field ui boolean
 ---@field askOverwrite boolean
@@ -44,14 +55,20 @@ function app.command.Launch(t) end
 ---@param t ExportSpriteSheetArgs
 function app.command.ExportSpriteSheet(t) end
 
----@class CanvasSizeArgs
----@field ui boolean
+---@class CanvasSizeArgs4
+---@field ui boolean? default true
 ---@field left integer
 ---@field top integer
 ---@field right integer
 ---@field bottom integer
----@field bounds Rectangle? alternative to left/top/right/bottom
----@field trimOutside boolean
+---@field trimOutside boolean? default false
+
+---@class CanvasSizeArgs1
+---@field ui boolean? default true
+---@field bounds RectangleArg
+---@field trimOutside boolean? default false
+
+---@alias CanvasSizeArgs CanvasSizeArgs1|CanvasSizeArgs4
 
 ---@param t CanvasSizeArgs
 function app.command.CanvasSize(t) end
