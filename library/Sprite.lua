@@ -36,6 +36,12 @@ function Image:drawImage(sourceImage, position, opacity, blendmode) end
 ---@field isGroup boolean
 ---@field layers Layer[]? if layer is group
 ---@field cels Cel[]
+Layer = {}
+
+---Returns a cel, if any, at the intersection of the layer and a frame.
+---@param frameNumber Frame|integer a frame object or its frame number
+---@return Cel?
+function Layer:cel(frameNumber) end
 
 ---@class Frame
 ---@field sprite Sprite
@@ -86,7 +92,7 @@ function Sprite:newEmptyFrame() end
 function Sprite:deleteFrame(frame) end
 
 ---@param layer Layer
----@param frame Frame
+---@param frame Frame|integer
 ---@param image Image?
 ---@param position Point?
 ---@return Cel
@@ -106,3 +112,11 @@ function Sprite:setPalette(palette) end
 function Sprite:saveAs(filename) end
 
 function Sprite:close() end
+
+---Creates a new layer at the top of the layers stack.
+---@return Layer
+function Sprite:newLayer() end
+
+---Deletes the given layer or the layer with the given layerName (a string).
+---@param layer Layer|string
+function Sprite:deleteLayer(layer) end
