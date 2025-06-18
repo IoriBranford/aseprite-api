@@ -13,7 +13,7 @@ Image = {}
 function Image() end
 
 ---@param sourceImage Image
----@param position Point?
+---@param position PointArg?
 ---@param opacity integer?
 ---@param blendmode BlendMode?
 function Image:drawImage(sourceImage, position, opacity, blendmode) end
@@ -25,7 +25,7 @@ function Image:drawImage(sourceImage, position, opacity, blendmode) end
 ---@field frameNumber integer the frame number 1 is the first frame (not 0). If you set this property the cel will be moved to the given frameNumber, check the notes of Cel.frame.
 ---@field image Image
 ---@field bounds Rectangle
----@field position Point
+---@field position PointArg
 ---@field opacity integer from 0 to 255. The cel is completely transparent when the value is 0; opaque when the value is 255.
 
 ---@class Layer
@@ -94,7 +94,7 @@ function Sprite:deleteFrame(frame) end
 ---@param layer Layer
 ---@param frame Frame|integer
 ---@param image Image?
----@param position Point?
+---@param position PointArg?
 ---@return Cel
 function Sprite:newCel(layer, frame, image, position) end
 

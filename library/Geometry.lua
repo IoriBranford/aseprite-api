@@ -5,6 +5,8 @@
 ---@field y number
 Point = {}
 
+---@alias PointArg Point|number[]
+
 ---@overload fun(x:number, y:number):Point
 function Point() end
 
@@ -28,7 +30,7 @@ function Size:union(otherSize) end
 ---@field h number
 ---@field width number
 ---@field height number
----@field origin Point
+---@field origin PointArg
 ---@field size SizeArg
 ---@field isEmpty boolean
 Rectangle = {}
