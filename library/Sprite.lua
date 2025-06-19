@@ -18,6 +18,9 @@ function Image() end
 ---@param blendmode BlendMode?
 function Image:drawImage(sourceImage, position, opacity, blendmode) end
 
+---@return boolean isEmpty
+function Image:isEmpty() end
+
 ---@class Cel
 ---@field sprite Sprite
 ---@field layer Layer
