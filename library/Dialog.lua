@@ -2,6 +2,15 @@
 
 ---@alias WidgetData boolean|string|number
 
+---@class DialogWidget
+---@field id string
+---@field label string
+---@field focus boolean
+---@field enabled boolean
+---@field visible boolean
+---@field hexpand boolean
+---@field vexpand boolean
+
 ---@class Dialog
 ---@field data {[string]:WidgetData}
 ---@field bounds Rectangle
@@ -12,11 +21,11 @@ Dialog = {}
 ---@overload fun(t:{title:string,notitlebar:boolean,parent:Dialog,onclose:function}):Dialog
 function Dialog() end
 
----@param t {id:string, label:string, text:string, selected:boolean, focus:boolean, onclick:function}
+---@param t DialogWidget|{text:string, selected:boolean, onclick:function}
 ---@return Dialog
 function Dialog:button(t) end
 
----@param t {id:string, label:string, text:string, selected:boolean, onclick:function}
+---@param t DialogWidget|{text:string, selected:boolean, onclick:function}
 ---@return Dialog
 function Dialog:check(t) end
 
@@ -27,15 +36,15 @@ function Dialog:close() end
 ---@return Dialog
 function Dialog:color() end
 
----@param t {id:string, label:string, option:string, options:string[], onchange:function}
+---@param t DialogWidget|{option:string, options:string[], onchange:function}
 ---@return Dialog
 function Dialog:combobox(t) end
 
----@param t {id:string, label:string, text:string, focus:boolean, onchange:function}
+---@param t DialogWidget|{text:string, onchange:function}
 ---@return Dialog
 function Dialog:entry(t) end
 
----@param t {id:string, label:string, text:string}
+---@param t DialogWidget|{text:string}
 ---@return Dialog
 function Dialog:label(t) end
 
@@ -47,32 +56,33 @@ function Dialog:modify(t) end
 ---@return Dialog
 function Dialog:newrow(t) end
 
----@param t {id:string, label:string, text:string, decimals:integer, onchange:function}
+---@param t DialogWidget|{text:string, decimals:integer, onchange:function}
 ---@return Dialog
 function Dialog:number(t) end
 
----@param t {id:string, label:string, text:string, selected:boolean, onclick:function}
+---@param t DialogWidget|{text:string, selected:boolean, onclick:function}
 ---@return Dialog
 function Dialog:radio(t) end
 
----@param t {id:string, text:string}
+---@param t DialogWidget|{text:string}
 ---@return Dialog
 function Dialog:separator(t) end
 
+---@param t DialogWidget?
 ---@return Dialog
-function Dialog:shades() end
+function Dialog:shades(t) end
 
 ---@param t {wait:boolean,bounds:Rectangle,autoscrollbars:boolean}?
 ---@return Dialog
 function Dialog:show(t) end
 
----@param t {id:string, label:string, min:integer, max:integer, value:integer, onchange:function, onrelease:function}
+---@param t DialogWidget|{min:integer, max:integer, value:integer, onchange:function, onrelease:function}
 ---@return Dialog
 function Dialog:slider(t) end
 
 ---If called for the first time (or anytime after a Dialog:endtabs call), it creates a new tabs group and starts the first tab. If called after a previous Dialog:tab call, it marks the end of the previous tab and starts a new one.
 ---Once started a tab, you can define its content by adding widgets as usual. When you are done adding tabs, call Dialog:endtabs.
----@param t {id:string, text:string, onclick:function}
+---@param t DialogWidget|{text:string, onclick:function}
 ---@return Dialog
 function Dialog:tab(t) end
 
@@ -80,6 +90,6 @@ function Dialog:tab(t) end
 ---@return Dialog
 function Dialog:endtabs(t) end
 
----@param t { id:string, label:string, title:string, open:boolean, save:boolean, filename:string|string[], filetypes:string[], onchange:function }
+---@param t DialogWidget|{ title:string, open:boolean, save:boolean, filename:string|string[], filetypes:string[], onchange:function }
 ---@return Dialog
 function Dialog:file(t) end
