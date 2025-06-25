@@ -7,6 +7,7 @@
 ---@field layer Layer
 ---@field sprite Sprite
 ---@field sprites Sprite[]
+---@field window Window
 app = {}
 
 ---@class AppAlert
