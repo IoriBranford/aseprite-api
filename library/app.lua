@@ -8,6 +8,7 @@
 ---@field sprite Sprite
 ---@field sprites Sprite[]
 ---@field window Window
+---@field params {[string]:string} a table with parameters specified as --script-param key=value in the CLI or as <param> in user.aseprite-keys or gui.xml file.
 app = {}
 
 ---@class AppAlert
