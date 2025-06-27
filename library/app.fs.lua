@@ -1,5 +1,8 @@
 ---@meta
 
+---@class app_fs
+---@field pathSeparator string the preferred path separator of the current platform, it is / on macOS and Linux, and \ on Windows. Preferably you should use app.fs.joinPath().
+---@field currentPath string the path the Aseprite executable was launched from.
 app.fs = {}
 
 ---@param fn string
