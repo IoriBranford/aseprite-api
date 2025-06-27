@@ -21,6 +21,18 @@ function app.fs.fileTitle(fn) end
 ---@return string
 function app.fs.filePathAndTitle(fn) end
 
+---@param fn string
+---@return string
+function app.fs.fileExtension(fn) end
+
+---@param path string
+---@return string
+function app.fs.makeDirectory(path) end
+
+---@param path string
+---@return string
+function app.fs.makeAllDirectories(path) end
+
 ---Can accept any number of string arguments to join together with the path separator for the current platform.
 ---@param ... string
 ---@return string
