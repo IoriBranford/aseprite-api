@@ -14,9 +14,11 @@ app = {}
 ---@class AppAlert
 ---@field title string
 ---@field text string|string[]
----@field buttons string|string[]?
+---@field buttons string|string[]? default is a single "OK" button
 
+---Shows an alert message.
 ---@param alert string|AppAlert
+---@return integer pressedButton 1 if the first button was clicked, 2 if the second one, etc.
 function app.alert(alert) end
 
 ---@param name string
